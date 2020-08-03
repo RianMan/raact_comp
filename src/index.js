@@ -1,5 +1,3 @@
-import Button from './comp/button';
+import button from './comp/button';
 
-export default { 
-    Button
-};
+export const Button = button;

@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from  './index.less';
 
-function Button({children}){
-    return <button  className={styles.button}>
+function Button({onClick, children}){
+    return <button onClick={onClick}  className={styles.button}>
         {children}
     </button>
 }

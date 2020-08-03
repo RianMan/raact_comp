@@ -1,6 +1,7 @@
 {
   "projectName": "react-comp",
   "projectVersion": "1.0.0",
+  "name": "react-comp",
   "projectdescription": "react 组件库 ",
   "author": "shawvi",
   "main": "./lib/index.js",

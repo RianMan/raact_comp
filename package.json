@@ -4,7 +4,7 @@
   "version": "1.0.1",
   "projectdescription": "react 组件库 ",
   "author": "shawvi",
-  "main": "./src/index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "dev": "webpack-dev-server --config  config/webpack.dev.config.js",
     "build": "webpack --config config/webpack.prd.config.js",

@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.scss'
+import styles  from './index.less'
 import Animate from 'rc-animate';
 
 export default class AddReceive extends React.Component {
@@ -749,26 +749,26 @@ export default class AddReceive extends React.Component {
       let id = 0
       return (
         <Animate transitionName="fade" transitionAppear>
-          {show ? <div key="1" className="area_mask">
-            <div className="area_container">
-                <div className="area_title">
+          {show ? <div key="1" className={styles.area_mask}>
+            <div className={styles.area_container}>
+                <div className={styles.area_title}>
                   <div onClick={()=>{ handleControllerShow(false) }} >取消</div>
                   <div onClick={() => {this.handleOk()}}>确定</div>
                 </div>
-                <div className="select_container">
-                  <div id="province" className="select province_select" onClick={this.handleChange.bind(this, "province")}>
+                <div className={styles.select_container}>
+                  <div id="province" className={`${styles.province_select} ${styles.select}`} onClick={this.handleChange.bind(this, "province")}>
                       {this.state.provinces.map(province => (
-                          <div className="item" style={{ color: p === province ? '#FF981A' : '' }} value={province} key={id++}>{province}</div>
+                          <div className={styles.item}  style={{ color: p === province ? '#FF981A' : '' }} value={province} key={id++}>{province}</div>
                       ))}
                   </div>
-                  <div id="city" className="select city_select" onClick={this.handleChange.bind(this, "city")}>
+                  <div id="city" className={`${styles.city_select} ${styles.select}`}  onClick={this.handleChange.bind(this, "city")}>
                       {this.state.cities.map(city => (
-                          <div className="item" style={{ color: ci === city ? '#FF981A' : '' }} value={city} key={id++}>{city}</div>
+                          <div className={styles.item} style={{ color: ci === city ? '#FF981A' : '' }} value={city} key={id++}>{city}</div>
                       ))}
                   </div>
-                  <div id="county" className="select county_select" onClick={this.handleChange.bind(this, "county")}>
+                  <div id="county" className={`${styles.county_select} ${styles.select}`} onClick={this.handleChange.bind(this, "county")}>
                       {this.state.counties.map(county => (
-                          <div className="item" style={{ color: co === county ? '#FF981A' : '' }} value={county} key={id++}>{county}</div>
+                          <div className={styles.item} style={{ color: co === county ? '#FF981A' : '' }} value={county} key={id++}>{county}</div>
                       ))}
                   </div>
                 </div>
